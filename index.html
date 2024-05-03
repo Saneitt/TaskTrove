@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #57baba, #442774, #39777a, #4e4971);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 150px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .options p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .options .btn {
+            display: inline-block;
+            width: 150px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4ecdc4;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .options .btn:hover {
+            background-color: #3cb1ab;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="logo">
+            <img style="border-radius: 50px;" src="TTimages/TaskTrovelogo.jpg" alt="Company Logo">
+        </div>
+        <div class="options">
+            <p>You are?</p>
+            <a href="TTlogin.html">
+                <button class="btn">User</button>
+            </a>
+            <button class="btn">Worker</button>
+        </div>
+    </div>
+</body>
+</html>

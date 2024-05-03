@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTrove - Preference Filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #777, #333); /* Grey gradient background */
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(to right, #800080, #4B0082); /* Purple gradient */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            z-index: 1000;
+            height: 100px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 30px;
+        }
+
+        header nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 10px;
+            width: 40px; /* Adjust size as needed */
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 80px; /* Adjust according to the header height */
+        }
+
+        .content h1, .content h2, .content p {
+            color: #333;
+        }
+
+        .filter-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .filter-item h2 {
+            margin-top: 0;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4ecdc4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3cb1ab;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img style="border-radius: 50px;" src="TTimages/TaskTrovelogo.jpg" alt="TaskTrove Logo" class="logo">
+                    </a>
+                    <h1>TaskTrove</h1>
+                </div>
+                <ul>
+                    <li><a href="TTmainpage.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h1>Preference Filter</h1>
+            <div class="filter-item">
+                <h2>Location</h2>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Madhapur </label>
+                    <label><input type="checkbox"> Bachupally </label>
+                    <label><input type="checkbox"> Nagole </label>
+                    <label><input type="checkbox"> Kukatpally </label>
+                    <!-- Add more location options as needed -->
+                </div>
+            </div>
+            <div class="filter-item">
+                <h2>Service Type</h2>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Cleaning</label>
+                    <label><input type="checkbox"> Carpentry</label>
+                    <label><input type="checkbox"> Masonry</label>
+                    <!-- Add more service type options as needed -->
+                </div>
+            </div>
+            <button class="btn">Apply Filters</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTrove - Cleaning Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #777, #333); /* Grey gradient background */
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(to right, #800080, #4B0082); /* Purple gradient */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            z-index: 1000;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            margin-right: 10px;
+            width: 40px; /* Adjust size as needed */
+            border-radius: 50px;
+        }
+
+        header .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 80px; /* Adjust according to the header height */
+        }
+
+        .content h1, .content h2, .content p {
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease; /* Transition background-color */
+            cursor: pointer;
+        }
+
+        .menu-item.selected {
+            background-color: #4B0082;
+        }
+
+        .menu-item:hover {
+            background-color: #555; /* Change to grey color on hover */
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .menu-item-content {
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Additional Styles */
+        .service-options {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .option-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .option-menu label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .option-menu input[type="datetime-local"],
+        .option-menu input[type="number"],
+        .option-menu select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .option-menu a {
+            font-size: 16px;
+            color: #4B0082;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .option-menu input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4B0082;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            align-self: center;
+        }
+
+        .option-menu input[type="submit"]:hover {
+            background-color: #800080;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="TTmainpage.html">
+                <img src="TTimages/TaskTrovelogo.jpg" alt="TaskTrove Logo" class="logo">
+            </a>
+            <h1>TaskTrove</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h1>Cleaning Services</h1>
+            <div class="menu">
+                <div class="menu-item" onclick="toggleSelected(this)">
+                    <img src="TTimages/Bathroom and Kitchen Cleaning.jpeg" alt="Bathroom and Kitchen Cleaning">
+                    <div class="menu-item-content">
+                        <h3>Bathroom and Kitchen Cleaning</h3>
+                        <p>Thorough cleaning for your bathrooms and kitchens.</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleSelected(this)">
+                    <img src="TTimages/Full Home Cleaning.jpeg" alt="Full Home Cleaning">
+                    <div class="menu-item-content">
+                        <h3>Full Home Cleaning</h3>
+                        <p>Comprehensive cleaning for your entire home.</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleSelected(this)">
+                    <img src="TTimages/Outdoor Maintenance.jpeg" alt="Outdoor Maintenance">
+                    <div class="menu-item-content">
+                        <h3>Outdoor Maintenance</h3>
+                        <p>Cleaning and maintenance for your outdoor areas.</p>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleSelected(this)">
+                    <img src="TTimages/SofaCarpet Cleaning.jpeg" alt="Sofa/Carpet Cleaning">
+                    <div class="menu-item-content">
+                        <h3>Sofa/Carpet Cleaning</h3>
+                        <p>Professional cleaning for your sofas and carpets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="service-options">
+                <h2>Service Details</h2>
+                <form class="option-menu" action="#" method="post">
+                    <label for="datetime">Desired Date and Time:</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                    <label for="duration">Approximate Duration (in hours):</label>
+                    <input type="number" id="duration" name="duration" required>
+                    <label for="workers">Number of Workers Required:</label>
+                    <input type="number" id="workers" name="workers" required>
+                    <a href="#" id="location">Set Location</a>
+                    <input type="submit" value="Check Availability">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSelected(element) {
+            element.classList.toggle('selected');
+        }
+    </script>
+</body>
+</html>

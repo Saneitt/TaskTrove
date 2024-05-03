@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #57baba, #442774, #39777a, #4e4971);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            height: 550px; /* Increased height */
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #442774;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .language-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .language-button {
+            background-color: #f0f0f0;
+            color: none;
+            border: 2px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .language-button:hover{
+            background-color: #ddd;
+        }
+        .language-button.selected {
+            background-color:#3cb1ab;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #4ecdc4;
+            border-radius: 25px;
+            background-color: #4ecdc4;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(78, 205, 196, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #3cb1ab;
+            border-color: #3cb1ab;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="TTimages/TaskTrovelogo.jpg" alt="Logo">
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form class="form-group" action="TTlogin.html" method="post"> <!-- Added action and method attributes -->
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="sex" required>
+                <option value="" disabled selected>Select Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <h3>Languages you can speak: (Select up to 3)</h3>
+            <div class="language-buttons">
+                <button type="button" class="language-button" data-language="Bengali">Bengali</button>
+                <button type="button" class="language-button" data-language="Hindi">Hindi</button>
+                <button type="button" class="language-button" data-language="English">English</button>
+                <button type="button" class="language-button" data-language="Telugu">Telugu</button>
+                <button type="button" class="language-button" data-language="Urdu">Urdu</button>
+                <button type="button" class="language-button" data-language="Tamil">Tamil</button>
+            </div>
+            <input type="hidden" name="languages" id="selected">
+            <button type="submit" class="btn">Sign Up</button> <!-- Changed button type to submit -->
+        </form>
+    </div>
+
+    <script>
+        // Get all language buttons
+        const languageButtons = document.querySelectorAll('.language-button');
+    
+        // Add click event listener to each button
+        languageButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Toggle the 'selected' class on the clicked button
+                button.classList.toggle('selected');
+    
+                // Get all selected language buttons
+                const selectedButtons = document.querySelectorAll('.language-button.selected');
+    
+                // Update the hidden input field with the selected languages
+                const selectedLanguages = Array.from(selectedButtons).map(button => button.dataset.language).join(', ');
+                document.getElementById('selected').value = selectedLanguages;
+            });
+        });
+    </script>
+    
+</body>
+</html>

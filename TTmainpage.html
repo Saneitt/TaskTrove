@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTrove - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #777, #333); /* Grey gradient background */
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(to right, #800080, #4B0082); /* Purple gradient */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            z-index: 1000;
+            height: 100px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 30px;
+        }
+
+        header nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 10px;
+            width: 40px; /* Adjust size as needed */
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 80px; /* Adjust according to the header height */
+        }
+
+        .content h1, .content h2, .content p {
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            color: inherit; /* Ensures links inherit the color from parent */
+        }
+
+
+        .menu-item:hover {
+            transform: translateY(-15px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .menu-item-content {
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Additional style for the search input field */
+        .search-container {
+            display: none;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 200px; /* Adjust width as needed */
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        /* Adjust size of search icon */
+        .searchIcon {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img style="border-radius: 50px;" src="TTimages/TaskTrovelogo.jpg" alt="TaskTrove Logo" class="logo">
+                    </a>
+                    <h1>TaskTrove</h1>
+                </div>
+                <ul>
+                    <li>
+                        <!-- Search icon -->
+                        <a href="#" id="search-icon">
+                            <img class="searchIcon" src="TTimages/Search icon.png" alt="Search">
+                        </a>
+                        <!-- Search input field -->
+                        <div class="search-container" id="search-container">
+                            <input type="text" class="search-input" placeholder="Search...">
+                        </div>
+                    </li>
+                    <li><a href="Preference.html">preference filter</a></li>
+                    <li><a href="Mybookings.html">My bookings</a></li>
+                    <li><a href="Settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h1>Welcome to TaskTrove</h1>
+            <p>We're here to connect skilled laborers with those in need of their services. Our platform bridges the gap between eager workers and individuals seeking help, ensuring opportunities for both sides.</p>
+
+            <h2>Popular Services</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <a href="Cleaning Services.html">
+                        <img src="TTimages/download (1).jpg" alt="Service 1">
+                        <div class="menu-item-content">
+                            <h3>Cleaning</h3>
+                            <p>Our cleaning service offers hardworking individuals the chance to shine with fair pay. We provide thorough cleaning solutions while empowering dedicated workers.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Carpentry Services.html">
+                        <img src="TTimages/download (2).jpg" alt="Service 2">
+                        <div class="menu-item-content">
+                            <h3>Carpenting</h3>
+                            <p>Our carpentry service gives diligent laborers the opportunity to showcase their skills at reasonable wages. From repairs to intricate projects, we deliver quality workmanship.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Masonry Services.html">
+                        <img src="TTimages/download (3).jpg" alt="Service 3">
+                        <div class="menu-item-content">
+                            <h3>Masonry</h3>
+                            <p>Our masonry service empowers workers to excel in construction. With fair pay and growth opportunities, our team delivers precise craftsmanship to bring your vision to life.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more service items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the search icon and search container
+        const searchIcon = document.getElementById("search-icon","search");
+        const searchContainer = document.getElementById("search-container");
+
+        // Toggle visibility of search container when search icon is clicked
+        searchIcon.addEventListener("click", () => {
+            searchContainer.style.display = (searchContainer.style.display === "block") ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
